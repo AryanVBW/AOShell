@@ -4,6 +4,7 @@
     <string name="new_session">New Session</string>
     <string name="network_tools">Network Tools</string>
     <string name="system_monitor">System Monitor</string>
+    <string name="linux_environment">Linux Environment</string>
     <string name="plugins">Plugins</string>
     <string name="settings">Settings</string>
     <string name="command_helper">Command Helper</string>

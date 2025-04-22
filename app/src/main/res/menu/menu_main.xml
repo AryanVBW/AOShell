@@ -9,6 +9,11 @@
         app:showAsAction="ifRoom" />
         
     <item
+        android:id="@+id/action_linux_environment"
+        android:title="@string/linux_environment"
+        app:showAsAction="never" />
+        
+    <item
         android:id="@+id/action_network_tools"
         android:title="@string/network_tools"
         app:showAsAction="never" />

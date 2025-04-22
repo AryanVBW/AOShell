@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import com.advancedterminal.app.R
 import com.advancedterminal.app.databinding.ActivityMainBinding
+import com.advancedterminal.app.linux.LinuxDistributionManager
+import com.advancedterminal.app.linux.LinuxEnvironmentActivity
 import com.advancedterminal.app.service.TerminalService
 import com.advancedterminal.app.terminal.TerminalSession
 import com.advancedterminal.app.terminal.TerminalView
@@ -89,6 +91,12 @@ class MainActivity : AppCompatActivity() {
             R.id.action_system_monitor -> {
                 // Launch System Monitor activity
                 val intent = Intent(this, SystemMonitorActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.action_linux_environment -> {
+                // Launch Linux Environment activity
+                val intent = Intent(this, LinuxEnvironmentActivity::class.java)
                 startActivity(intent)
                 true
             }

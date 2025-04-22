@@ -62,6 +62,12 @@
             android:label="@string/system_monitor"
             android:parentActivityName=".ui.MainActivity" />
         
+        <activity
+            android:name=".linux.LinuxEnvironmentActivity"
+            android:exported="false"
+            android:label="@string/linux_environment"
+            android:parentActivityName=".ui.MainActivity" />
+        
         <service
             android:name=".service.TerminalService"
             android:enabled="true"
