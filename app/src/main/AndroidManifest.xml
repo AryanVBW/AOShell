@@ -56,6 +56,12 @@
             </intent-filter>
         </activity>
         
+        <activity
+            android:name=".ui.SystemMonitorActivity"
+            android:exported="false"
+            android:label="@string/system_monitor"
+            android:parentActivityName=".ui.MainActivity" />
+        
         <service
             android:name=".service.TerminalService"
             android:enabled="true"

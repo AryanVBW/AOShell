@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
+import android.view.inputmethod.InputMethodManager
 import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
@@ -17,6 +18,7 @@ import com.advancedterminal.app.databinding.ActivityMainBinding
 import com.advancedterminal.app.service.TerminalService
 import com.advancedterminal.app.terminal.TerminalSession
 import com.advancedterminal.app.terminal.TerminalView
+import com.advancedterminal.app.ui.SystemMonitorActivity
 
 /**
  * Main activity for the Advanced Terminal application.
@@ -54,6 +56,9 @@ class MainActivity : AppCompatActivity() {
         // Set up toolbar
         setSupportActionBar(binding.toolbar)
         
+        // Ensure the window allows the keyboard to appear
+        window.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+        
         // Initialize views
         terminalView = binding.terminalView
         
@@ -81,8 +86,22 @@ class MainActivity : AppCompatActivity() {
                 createNewSession()
                 true
             }
+            R.id.action_system_monitor -> {
+                // Launch System Monitor activity
+                val intent = Intent(this, SystemMonitorActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.action_network_tools -> {
+                Toast.makeText(this, "Network Tools feature coming soon", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.action_plugins -> {
+                Toast.makeText(this, "Plugins feature coming soon", Toast.LENGTH_SHORT).show()
+                true
+            }
             R.id.action_settings -> {
-                // TODO: Launch settings
+                Toast.makeText(this, "Settings feature coming soon", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -117,8 +136,9 @@ class MainActivity : AppCompatActivity() {
     private fun setupListeners() {
         // Set up keyboard shortcuts and gesture handlers
         binding.fab.setOnClickListener {
-            // Show terminal command helper or quick actions
-            showQuickActionsMenu()
+            terminalView.requestFocus()
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(terminalView, InputMethodManager.SHOW_IMPLICIT)
         }
     }
     
