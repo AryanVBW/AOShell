@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Advanced Terminal</string>
+    <string name="new_session">New Session</string>
+    <string name="network_tools">Network Tools</string>
+    <string name="system_monitor">System Monitor</string>
+    <string name="plugins">Plugins</string>
+    <string name="settings">Settings</string>
+    <string name="command_helper">Command Helper</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_explanation">This app requires additional permissions to function properly. Please grant all requested permissions.</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="session_exited">Session exited</string>
+    <string name="session_created">New session created</string>
+    <string name="session_failed">Failed to create session</string>
+    <string name="command_not_found">Command not found</string>
+    <string name="quick_commands">Quick Commands</string>
+    <string name="font_size">Font Size</string>
+    <string name="font_size_summary">Adjust the terminal font size</string>
+    <string name="terminal_colors">Terminal Colors</string>
+    <string name="terminal_colors_summary">Customize the terminal color scheme</string>
+    <string name="hardware_acceleration">Hardware Acceleration</string>
+    <string name="hardware_acceleration_summary">Enable to improve performance</string>
+    <string name="keep_screen_on">Keep Screen On</string>
+    <string name="keep_screen_on_summary">Prevent screen from turning off while terminal is active</string>
+    <string name="run_command">Run Command</string>
+    <string name="enter_command">Enter command</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item
+        android:id="@+id/action_new_session"
+        android:title="@string/new_session"
+        android:icon="@drawable/ic_new_terminal"
+        app:showAsAction="ifRoom" />
+        
+    <item
+        android:id="@+id/action_network_tools"
+        android:title="@string/network_tools"
+        app:showAsAction="never" />
+        
+    <item
+        android:id="@+id/action_system_monitor"
+        android:title="@string/system_monitor"
+        app:showAsAction="never" />
+        
+    <item
+        android:id="@+id/action_plugins"
+        android:title="@string/plugins"
+        app:showAsAction="never" />
+        
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+</menu>
